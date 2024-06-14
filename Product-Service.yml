@@ -1,36 +1,46 @@
 spring:
-  boot:
+ boot:
     admin:
       client:
         url: http://localhost:1111/
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/ashokit_ecomm
-    username: root
+ datasource:
+    driver-class-name: com.mysql.jdbc.Driver
     password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
+    url: jdbc:mysql://localhost:3306/ecommerceapp
+    username: root
+  
+ jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
- 
-
+    show-sql: true  
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-
 server:
   port: 8082
-
+  
 product-service:
-  messages: 
-    productCreated: Product Created Successfully
-    productCreationFailed: Product Creation Failed
-    productUpdated: Product Updated Successfully
-    productUpdateFailed: Product Update Failed
-    productDeleted: Product Deleted Successfully
-    productDeletionFailed: Product Deletion Failed
-    productNotFound: Product Not Found
-    productFetchError: Error Fetching Product
+   messages: 
+    addProd: Product added sucessful.
+    addProdErr: product not added..
+    AddCategory: category Added sucessful ...!
+    AddCategoryErr: category not added
+    CategorUpdate: category Updated
+    categoryUpdateErr: category not found for 
+    allcategories: All category display
+    categories: Category data 
+    categoryNotFount: category not found with this id
+    category_deleted: Category delete sucessfully
+    update_product: product update sucessfully
+    update_prod_err: product update failed
+    product_retrieve: product 
+    allProduct_retrieve: all products 
+    product_delete: product deleted sucess
+    stock_update: stock update sucess
+    stock_not_fount: product not found for updation
+    product_not_found: product not found 
+    product_not_found_for_delete: product not found for delete
+    category_not_found_for_delete: category not found for delete
+    
