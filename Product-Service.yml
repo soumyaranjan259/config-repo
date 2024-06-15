@@ -1,25 +1,26 @@
 spring:
- boot:
+  boot:
     admin:
       client:
         url: http://localhost:1111/
- datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+  datasource:
+    username: root
     password: root
     url: jdbc:mysql://localhost:3306/jrtp26_ecomm
-    username: root
-  
- jpa:
+
+  jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true  
+    show-sql: true
+    
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+
 server:
-  port: 8082
+ port: 8082
   
 product-service:
    messages: 
