@@ -1,0 +1,35 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/jrtp26_ecomm
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+server:
+ port: 8084
+
+order-service:
+  messages:
+    list_added: list added sucessfully
+    list_added_failed: list added failed
+    order_retrieve: order fetched sucessfully
+    order_updated: order updated sucessfully
+    order_update_err: order update failed
+    order_retrieve_date: order retrive sucessfully by given date
+    order_not_found_date: order not found the given date
+    all_order_retrieve: all order fetched
+    all_order_retrieve_err: all order fetched failed
