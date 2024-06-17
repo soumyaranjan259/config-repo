@@ -1,0 +1,27 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/jrtp26_ecomm
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+server:
+ port: 8081
+report-service:
+ messages:
+  orderFetch: All Orders fetched successfully
+  orderFetchErr: Failed to fetch all Orders
